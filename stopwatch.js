@@ -6,13 +6,18 @@
         let txt = document.getElementById('clock');
 
         let hms;
+        let aux = 1;
 
         function start_cron(){
-            hms = setInterval(cron, 10);
+           if(aux){
+                hms = setInterval(cron, 10); 
+                aux = 0;
+           }     
         }
 
         function pause_cron(){
             clearInterval(hms);
+            aux = 1;
         }
 
         function stop_cron(){
@@ -22,6 +27,7 @@
             s = 0;
             ms = 0;
             text();
+            aux = 1;
         }
 
         function cron(){

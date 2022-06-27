@@ -30,12 +30,6 @@ body {
     justify-content: center;
 }
 
-.text-box{
-    margin-top: 15px;
-    display: flex;
-    justify-content: space-between;
-}
-
 .text {
     color: #FFF;
     text-shadow: 0px 1px rgb(219, 207, 207);
@@ -49,11 +43,6 @@ body {
 
 h2.text {
     margin-bottom: 10px;
-}
-
-.text-box .text {
-    width: 100px;
-    font-size: 8px;
 }
 
 .control {
