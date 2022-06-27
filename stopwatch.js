@@ -1,13 +1,14 @@
-let h = 0;
+        let h = 0;
         let m = 0;
         let s = 0;
+        let ms = 0;
 
         let txt = document.getElementById('clock');
 
         let hms;
 
         function start_cron(){
-            hms = setInterval(cron, 1000);
+            hms = setInterval(cron, 10);
         }
 
         function pause_cron(){
@@ -19,25 +20,31 @@ let h = 0;
             h = 0;
             m = 0;
             s = 0;
+            ms = 0;
             text();
         }
 
         function cron(){
-            s++;
+            ms++;
             text();
-            if(s > 60){
-                s = 0;
-                m++;
+            if(ms >= 100){
+                ms = 0;
+                s++;
                 text();
-                if(m > 60){
-                    m = 0;
-                    h++;
+                if(s >= 60){
+                    s = 0;
+                    m++;
                     text();
+                    if(m >= 60){
+                        m = 0;
+                        h++;
+                        text();
+                    }
                 }
             }
         }
 
         function text(){
             txt.innerHTML = (h >= 10 ? h : `0${h}`) + ':' +
-            (m >= 10 ? m : `0${m}`) + ':' + (s >= 10 ? s : `0${s}`);
+            (m >= 10 ? m : `0${m}`) + ':' + (s >= 10 ? s : `0${s}`) + '<p id="ms">.'+ (ms < 10 ? `0${ms}`: ms) + '</p>';
         }

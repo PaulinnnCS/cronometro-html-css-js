@@ -22,12 +22,12 @@ body {
 }
 
 .box-clock {
-    text-align: center;
     padding: 20px 10px;
-    font-size: 30px;
+    font-size: 25px;
     background-color: rgb(58, 60, 82);
-    color: rgb(255, 255, 255);
-    font-family: 'Press Start 2P', cursive;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
 }
 
 .text-box{
@@ -38,8 +38,13 @@ body {
 
 .text {
     color: #FFF;
+    text-shadow: 0px 1px rgb(219, 207, 207);
     text-align: center;
     font-family: 'Press Start 2P', cursive;
+}
+
+#ms {
+    font-size: 10px;
 }
 
 h2.text {
@@ -48,7 +53,7 @@ h2.text {
 
 .text-box .text {
     width: 100px;
-    font-size: 10px;
+    font-size: 8px;
 }
 
 .control {
@@ -63,16 +68,15 @@ h2.text {
 .control button {
     width: 100%;
     padding: 5px 15px;
-    border: none;
-    color: #FFF;
-    font-family: 'Press Start 2P', cursive;
-    text-transform: uppercase;
+    border-radius: 3px;
     cursor: pointer;
+    text-transform: uppercase;
 }
 
 .start {
     background: rgb(17, 146, 45);
-    box-shadow: -2px 2px rgb(14, 121, 37);
+    border:solid 0.5px rgb(30, 165, 59);
+    box-shadow: 0px 3px rgb(14, 121, 37);
 }
 
 .start:hover{
@@ -81,7 +85,8 @@ h2.text {
 
 .pause {
     background: rgb(38, 120, 187);
-    box-shadow: -2px 2px rgb(32, 99, 155);
+    border: solid 0.5px rgb(44, 132, 204);
+    box-shadow: 0px 3px rgb(32, 99, 155);
 }
 
 .pause:hover {
@@ -91,7 +96,8 @@ h2.text {
 
 .stop {
     background: rgb(177, 25, 25);
-    box-shadow: -2px 2px rgb(143, 21, 21);
+    border: solid 0.5px rgb(194, 37, 37);
+    box-shadow: 0px 3px rgb(143, 21, 21);
 }
 
 .stop:hover {
