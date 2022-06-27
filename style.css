@@ -14,15 +14,14 @@ body {
     min-height: 100vh;
 }
 
-.timer {
+.cron {
     display: flex; 
     flex-direction: column;
     justify-content: space-between;
     width: 300px;
-    height: 150px;
 }
 
-.box-timer {
+.box-clock {
     text-align: center;
     padding: 20px 10px;
     font-size: 30px;
@@ -32,26 +31,37 @@ body {
 }
 
 .text-box{
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
 }
 
 .text {
     color: #FFF;
-    width: 100px;
     text-align: center;
     font-family: 'Press Start 2P', cursive;
+}
+
+h2.text {
+    margin-bottom: 10px;
+}
+
+.text-box .text {
+    width: 100px;
     font-size: 10px;
 }
 
 .control {
     display: flex;
     margin-top: 15px;
+    flex-direction: column;
+    height: 100px;
     justify-content: space-between;
+    align-items: center;
 }
 
 .control button {
-    width: 125px;
+    width: 100%;
     padding: 5px 15px;
     border: none;
     color: #FFF;
@@ -66,7 +76,17 @@ body {
 }
 
 .start:hover{
-    background: rgb(17, 155, 47);
+    background: rgb(43, 150, 66);
+}
+
+.pause {
+    background: rgb(38, 120, 187);
+    box-shadow: -2px 2px rgb(32, 99, 155);
+}
+
+.pause:hover {
+    background: rgb(46, 128, 196);
+
 }
 
 .stop {
@@ -75,5 +95,5 @@ body {
 }
 
 .stop:hover {
-    background: rgb(190, 26, 26);
+    background: rgb(196, 38, 38);
 }
